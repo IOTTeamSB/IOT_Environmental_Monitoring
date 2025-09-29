@@ -1,0 +1,22 @@
+# IoT Çevresel İzleme Sistemi: Proje Mantığı
+
+## Projenin Amacı
+Bu proje, sıcaklık, nem ve hava kalitesi gibi çevresel verileri simüle eden bir IoT sistemidir. Veriler bir veritabanında saklanır ve kullanıcı dostu bir web arayüzünde görselleştirilir. Proje, Kontrolmatik’in akıllı şehir ve IoT tabanlı çevre izleme projelerine uygun bir prototip olarak tasarlanmıştır. Kullanıcılar, gerçek zamanlı veri grafiklerini görebilir, eşik aşımlarında uyarı alır ve geçmiş verileri tarih bazlı filtreleyebilir.
+
+## Nasıl Çalışır?
+1. **Veri Üretimi**: Sensörlerden gelen veriler (sıcaklık, nem, hava kalitesi) simüle edilir ve bir backend sunucusuna gönderilir.
+2. **Veri Depolama**: Veriler MongoDB Atlas’ta saklanır. Her veri noktası, zaman damgası ve sensör türü ile kaydedilir.
+3. **Veri İşleme**: Backend, eşik değerlerini kontrol eder (örneğin, sıcaklık > 30°C ise uyarı üretir).
+4. **Görselleştirme**: React tabanlı bir dashboard, canlı grafikler (Chart.js) ve bildirimler sunar. Kullanıcılar, tarih aralığı seçerek geçmiş verileri filtreleyebilir.
+5. **Kullanıcı Deneyimi**: TailwindCSS ile modern, duyarlı bir arayüz sağlanır.
+
+## Kontrolmatik’e Uygunluğu
+- **IoT Odaklı**: Kontrolmatik’in IoT tabanlı çözümleriyle uyumlu; sensör verisi yönetimi ve gerçek zamanlı izleme.
+- **Akıllı Şehir**: Çevresel izleme, akıllı şehir projelerinde kullanılan hava kalitesi ve iklim kontrol sistemlerine örnek teşkil eder.
+- **Veri Analitiği**: Verilerin toplanması, saklanması ve görselleştirilmesi, Kontrolmatik’in veri odaklı yaklaşımına hitap eder.
+- **Endüstriyel Uygulama**: Eşik uyarıları, endüstriyel otomasyon ve enerji yönetiminde kullanılan sistemlere benzer.
+
+## Neden Etkili?
+- 4 günde tamamlanabilir, basit ama profesyonel bir prototip.
+- Senin (CNC/gömülü sistem) ve kız arkadaşının (web/mobil geliştirme) becerilerini birleştirir.
+- GitHub’da sergilenmeye uygun, Kontrolmatik mülakatlarında portföy olarak öne çıkar.

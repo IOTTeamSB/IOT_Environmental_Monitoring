@@ -1,0 +1,44 @@
+# IoT Çevresel İzleme Sistemi: Teknik Detaylar
+
+## Proje Dosya Yapısı ve Açıklamalar
+
+### 1. Backend (Node.js/Express)
+- **Klasör: backend/**
+  - **index.js**: Ana sunucu dosyası. Express sunucusunu başlatır, MongoDB Atlas’a bağlanır ve API uç noktalarını tanımlar.
+  - **models/SensorData.js**: MongoDB veri şeması (sıcaklık, nem, hava kalitesi, zaman damgası).
+  - **routes/api.js**: API uç noktaları (veri ekleme, alma, filtreleme).
+  - **utils/simulateData.js**: Sensör verilerini simüle eder (örneğin, rastgele sıcaklık: 20-35°C).
+  - **Amaç**: Sensör verilerini toplar, eşik kontrolü yapar ve frontend’e veri sağlar.
+
+### 2. Frontend (React + TailwindCSS)
+- **Klasör: frontend/**
+  - **src/App.js**: Ana React bileşeni. Dashboard’un ana yapısını içerir.
+  - **src/components/Dashboard.js**: Canlı grafikler (Chart.js) ve bildirimleri gösterir.
+  - **src/components/Filter.js**: Tarih bazlı veri filtreleme arayüzü.
+  - **src/index.css**: TailwindCSS stilleri.
+  - **Amaç**: Kullanıcıya verileri görselleştirir, eşik uyarılarını gösterir ve filtreleme sağlar.
+
+### 3. Veritabanı (MongoDB Atlas)
+- **Kullanılan Koleksiyon**: `sensorData`
+  - Şema: `{ timestamp: Date, temperature: Number, humidity: Number, airQuality: Number }`
+  - Amaç: Sensör verilerini saklar ve tarih bazlı sorgular için kullanılır.
+
+### 4. Genel İş Akışı
+1. **Veri Simülasyonu**: `simulateData.js` her 10 saniyede rastgele veri üretir ve `/api/data` üzerinden backend’e gönderir.
+2. **Veri Kaydı**: Backend, verileri MongoDB Atlas’a kaydeder.
+3. **Eşik Kontrolü**: Backend, sıcaklık > 30°C gibi eşikleri kontrol eder ve uyarı üretir.
+4. **Veri Gösterimi**: Frontend, `/api/data` uç noktasından verileri çeker, Chart.js ile grafikler çizer.
+5. **Filtreleme**: Kullanıcı, tarih aralığı seçer; backend `/api/data/filter` ile filtrelenmiş veri döndürür.
+
+### 5. Teknik Stack
+- **Backend**: Node.js, Express, Mongoose (MongoDB bağlantısı).
+- **Frontend**: React, TailwindCSS, Chart.js.
+- **Veritabanı**: MongoDB Atlas.
+- **Deploy**: Backend → Render/Heroku, Frontend → Vercel.
+- **GitHub**: Proje reposu, README ve demo videosu.
+
+### 6. Önemli Notlar
+- **Performans**: Simülasyon hafif, MongoDB Atlas bulut tabanlı olduğu için hızlı.
+- **Güvenilirlik**: API’lerde hata yönetimi (try-catch) mevcut.
+- **Kullanıcı Deneyimi**: TailwindCSS ile modern, duyarlı tasarım.
+- **Mülakat için**: GitHub README’sinde projenin Kontrolmatik’e nasıl uyduğunu vurgulayın.
