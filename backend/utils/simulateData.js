@@ -11,7 +11,7 @@ const simulateData = async () => {
 
   try {
     // Veriyi API'ye gönder
-    await axios.post('http://localhost:5000/api/data', data);
+    await axios.post('http://localhost:4000/api/data', data);
     console.log('Simüle veri gönderildi:', data);
   } catch (err) {
     console.error('Simülasyon hatası:', err.message);
