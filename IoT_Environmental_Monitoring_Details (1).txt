@@ -41,4 +41,3 @@
 - **Performans**: Simülasyon hafif, MongoDB Atlas bulut tabanlı olduğu için hızlı.
 - **Güvenilirlik**: API’lerde hata yönetimi (try-catch) mevcut.
 - **Kullanıcı Deneyimi**: TailwindCSS ile modern, duyarlı tasarım.
-- **Mülakat için**: GitHub README’sinde projenin Kontrolmatik’e nasıl uyduğunu vurgulayın.
