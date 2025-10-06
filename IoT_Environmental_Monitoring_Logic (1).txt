@@ -10,7 +10,7 @@ Bu proje, sıcaklık, nem ve hava kalitesi gibi çevresel verileri simüle eden 
 4. **Görselleştirme**: React tabanlı bir dashboard, canlı grafikler (Chart.js) ve bildirimler sunar. Kullanıcılar, tarih aralığı seçerek geçmiş verileri filtreleyebilir.
 5. **Kullanıcı Deneyimi**: TailwindCSS ile modern, duyarlı bir arayüz sağlanır.
 
-## Kontrolmatik’e Uygunluğu
+##  Uygunluğu
 - **IoT Odaklı**: Kontrolmatik’in IoT tabanlı çözümleriyle uyumlu; sensör verisi yönetimi ve gerçek zamanlı izleme.
 - **Akıllı Şehir**: Çevresel izleme, akıllı şehir projelerinde kullanılan hava kalitesi ve iklim kontrol sistemlerine örnek teşkil eder.
 - **Veri Analitiği**: Verilerin toplanması, saklanması ve görselleştirilmesi, Kontrolmatik’in veri odaklı yaklaşımına hitap eder.
